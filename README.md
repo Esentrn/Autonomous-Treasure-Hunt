@@ -1,59 +1,70 @@
-# **Otonom Hazine Avı**
+# Autonomous Treasure Hunt
 
-Bu proje, **Java Swing** kullanılarak geliştirilmiş **A* algoritması tabanlı bir yol bulma ve keşif oyunudur**. Oyunda karakter, **A* algoritmasını kullanarak haritadaki hazineleri toplamak için en kısa yolu bulur** ve eğer hazine yoksa **rastgele bir keşif yapar**. Oyunda **sabit ve hareketli engeller** bulunur ve karakterin görüş alanı **sis mekaniği** ile sınırlıdır.  
+This project is an **A*-algorithm-based pathfinding and exploration game** developed using **Java Swing**. In the game, the character uses the **A* algorithm to find the shortest path to collect treasures on the map**, and if no treasure is available, it performs **random exploration**. The game includes **static and moving obstacles**, and the character’s field of view is limited by a **fog-of-war mechanic**.
 
-## **Özellikler**  
+## Features
 
-- **A* Algoritması** ile en kısa yol hesaplama  
-- **Rastgele oluşturulan dinamik harita**  
-- **Hazine toplama mekaniği**  
-- **Görüş alanı (sis mekaniği)**  
-- **Sabit ve hareketli engeller (ağaçlar, dağlar, duvarlar, kayalar, hareketli kuşlar ve arılar)**  
-- **Otonom hareket eden karakter**  
+- **Shortest path calculation** using the **A* Algorithm**
+- **Randomly generated dynamic map**
+- **Treasure collection mechanic**
+- **Field of view limitation** with a **fog-of-war system**
+- **Static and moving obstacles** (trees, mountains, walls, rocks, moving birds, and bees)
+- **Autonomously moving character**
 
-## **Kurulum ve Çalıştırma**  
+## Installation and Setup
 
-1. **Projeyi klonlayın**  
-   ```sh
-   git clone https://github.com/Esentrn/Autonomous-Treasure-Hunt.git
-   cd otonom-hazine
-   ```
-2. **Java derleyicisi ve çalışma ortamının (JDK 8+) yüklü olduğundan emin olun.**  
+### 1. Clone the Repository
 
-3. **Projeyi derleyip çalıştırın:**  
-   - **IDE (NetBeans, IntelliJ, Eclipse)**: `OtonomHazine.java` dosyasını çalıştırın.  
-   - **Komut satırı üzerinden çalıştırmak için:**  
-     ```sh
-     javac -d bin -sourcepath src src/ddd/OtonomHazine.java
-     java -cp bin ddd.OtonomHazine
-     ```
+```sh
+git clone https://github.com/Esentrn/Autonomous-Treasure-Hunt.git
+cd otonom-hazine
+```
 
-## **Oyun Mekaniği**  
+### 2. Make Sure Java Is Installed
 
-- **Başlangıç**:  
-  - "Oyuna Başla" butonu ile oyuna giriş yapılır.  
-  - Harita boyutu kullanıcıdan alınır ve rastgele bir harita oluşturulur.  
+Ensure that **JDK 8 or later** is installed on your system.
 
-- **Karakterin Hareketi**:  
-  - Karakter **en yakın hazineyi bulur ve A* algoritması ile en kısa yolu hesaplayarak hareket eder**.  
-  - Eğer hazine yoksa **rastgele bir şekilde keşif yapar**.  
-  - Karakter **hareket ettikçe sis açılır ve keşfedilen alanlar görünür hale gelir**.  
+### 3. Compile and Run the Project
 
-- **Engeller**:  
-  - **Sabit Engeller**: Ağaç, Kaya, Duvar, Dağ  
-  - **Hareketli Engeller**: **Kuş** (dikey hareket eder), **Arı** (yatay hareket eder)  
+- **Using an IDE (NetBeans, IntelliJ, Eclipse):**  
+  Run the `OtonomHazine.java` file.
 
-- **Hazine Toplama**:  
-  - Karakter bir hazineye ulaştığında, onu alır ve **toplanan hazineler listesine ekler**.  
-  - Hazine toplama işlemi oyun ekranında gösterilir.  
+- **Using the command line:**
 
-## **Ekran Görüntüleri**  
+```sh
+javac -d bin -sourcepath src src/ddd/OtonomHazine.java
+java -cp bin ddd.OtonomHazine
+```
 
-![Oyun Ekranı](https://github.com/Esentrn/Autonomous-Treasure-Hunt/blob/f82d3ee42d9dcbb9635a01d863f738b97109e850/Autonomous-Treasure-Hunt1.png)
+## Game Mechanics
 
-![Oyun Ekranı](https://github.com/Esentrn/Autonomous-Treasure-Hunt/blob/f82d3ee42d9dcbb9635a01d863f738b97109e850/Autonomous-Treasure-Hunt2.png)
+### Start
 
-## **Oyun Videosu**  
+- The game starts by clicking the **"Start Game"** button.
+- The map size is taken from the user, and a random map is generated.
 
-![Video Önizleme](https://github.com/Esentrn/Autonomous-Treasure-Hunt/blob/f82d3ee42d9dcbb9635a01d863f738b97109e850/Autonomous-Treasure-Hunt.gif)
+### Character Movement
 
+- The character **finds the nearest treasure and moves by calculating the shortest path using the A* algorithm**.
+- If there is no treasure available, the character **explores randomly**.
+- As the character moves, the **fog clears**, and explored areas become visible.
+
+### Obstacles
+
+- **Static Obstacles:** Tree, Rock, Wall, Mountain
+- **Moving Obstacles:** **Bird** (moves vertically), **Bee** (moves horizontally)
+
+### Treasure Collection
+
+- When the character reaches a treasure, it collects it and **adds it to the collected treasures list**.
+- The treasure collection process is displayed on the game screen.
+
+## Screenshots
+
+![Game Screen](https://github.com/Esentrn/Autonomous-Treasure-Hunt/blob/f82d3ee42d9dcbb9635a01d863f738b97109e850/Autonomous-Treasure-Hunt1.png)
+
+![Game Screen](https://github.com/Esentrn/Autonomous-Treasure-Hunt/blob/f82d3ee42d9dcbb9635a01d863f738b97109e850/Autonomous-Treasure-Hunt2.png)
+
+## Game Video
+
+![Video Preview](https://github.com/Esentrn/Autonomous-Treasure-Hunt/blob/f82d3ee42d9dcbb9635a01d863f738b97109e850/Autonomous-Treasure-Hunt.gif)
